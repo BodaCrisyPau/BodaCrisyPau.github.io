@@ -135,19 +135,27 @@ text-align: center;
                     <div class="text-center">
                         <img class="img-fluid mb-4" src="img/cancion.gif" alt="">
                             <div>
-				    <?php
-				    if($_POST["message"]) {
-				    mail("tourgoma@gmail.com", "Here is the subject line",
-				    $_POST["insert your message here"]. "From: an@email.address");
-				    }
-				    ?>
-				<form action="envio.php" method="GET">
-					<label for="nombre">Nombre</label>
-					<input type="text" id="nombre" name="nombre"/>
-					<label for="apellido">Apellido</label>
-					<input type="text" id="apellido" name="apellido"/>
-					<button id="envio">Enviar Formulario</button>
-				</form>
+<form action=”mailto:tourgoma@gmail.com”
+
+
+method=”POST”
+
+
+enctype=”text/plain”
+
+
+name=”EmailForm”>
+
+
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name"><br>
+
+
+<label for="ContactCommentt">Message:</label><br>
+<textarea id=”ContactCommentt” rows=”6″ cols=”20″>
+
+<input type="submit" value="Send">
+</form>
                             </div>
                     </div>
                 </div>
