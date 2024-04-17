@@ -1,4 +1,4 @@
-const [firstSection, secondSection] = document.querySelectorAll("seccion");
+const [firstSection, secondSection] = document.querySelectorAll("main");
 const button = document.querySelector("botoncancion");
 
 button.addEventListener("click", function() {
