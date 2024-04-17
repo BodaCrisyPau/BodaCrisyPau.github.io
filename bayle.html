@@ -135,14 +135,14 @@ text-align: center;
                     <div class="text-center">
                         <img class="img-fluid mb-4" src="img/cancion.gif" alt="">
 			    <div id="sugerircancion0" class="section-title position-relative text-center" style="visibility:visible;">
-                <section>
+                <section id="seccion">
 			<h1 class="font-secondary display-4">Deseas sugerir alguna canción?</h1>
 <i class="far fa-heart text-dark"></i><br><br><br>
-<button id ="button" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">SUGERIR CANCIÓN</button>
+<button id ="botoncancion" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">SUGERIR CANCIÓN</button>
 		</section>
 </div>
                             <div>
-				    <section hidden>
+				    <section id="seccion" hidden>
 		<form onsubmit="emailSend(); reset(); return false;">
 			<input type="text" id="name" placeholder="name" name="name" required>
 			<input type="text" id="phone" placeholder="phone" name="phone" required>
@@ -151,8 +151,8 @@ text-align: center;
 		</form>
 				    </section>
 				    <script>
-					    const [firstSection, secondSection] = document.querySelectorAll("section");
-					    const button = document.querySelector("button");
+					    const [firstSection, secondSection] = document.querySelectorAll("seccion");
+					    const button = document.querySelector("botoncancion");
 
 						button.addEventListener("click", function() {
 						  firstSection.toggleAttribute("hidden");
