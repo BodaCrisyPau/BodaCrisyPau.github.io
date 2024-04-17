@@ -138,7 +138,7 @@ text-align: center;
                 <section id="seccion">
 			<h1 class="font-secondary display-4">Deseas sugerir alguna canción?</h1>
 <i class="far fa-heart text-dark"></i><br><br><br>
-<button id ="botoncancion" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">SUGERIR CANCIÓN</button>
+<button id ="botoncancion" class="btn btn-primary font-weight-bold py-3 px-5" type="submit" onclick="SugeCancion()">SUGERIR CANCIÓN</button>
 		</section>
 </div>
                             <div>
@@ -151,6 +151,7 @@ text-align: center;
 		</form>
 				    </section>
 				    <script>
+					    function SugeCancion(){
 					    const [firstSection, secondSection] = document.querySelectorAll("seccion");
 					    const button = document.querySelector("botoncancion");
 
@@ -158,6 +159,7 @@ text-align: center;
 						  firstSection.toggleAttribute("hidden");
 						  secondSection.toggleAttribute("hidden");
 						});
+					    }
 				    </script>
                             </div>
                     </div>
