@@ -159,7 +159,7 @@ text-align: center;
                     <div class="text-center">
                         <img class="img-fluid mb-4" src="img/cancion.gif" alt="">
 			    <div>
-			<h9 class="font-secondary display-1">¿Quieres sugerir alguna canción?</h9>   
+			<h6 id="textooculto" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">¿Quieres sugerir alguna canción?</h6>  
 					</div>
 				    <br>
 <button id ="mostrar-button" class="btn btn-primary font-weight-bold py-3 px-5" onclick="toggleCajas()" >Si, quiero!!!</button>
@@ -328,15 +328,18 @@ document.getElementById("audio1").play();
             var caja = document.querySelectorAll('.caja.oculto');
             var mostrarButton = document.getElementById('mostrar-button');
             var ocultarButton = document.getElementById('ocultar-button');
+		var textooculto = document.getElementById('textooculto');
 
             caja.forEach(function(caja) {
                 if (caja.style.display === 'none' || caja.style.display === '') {
                     caja.style.display = 'block';
                     mostrarButton.style.display = 'none';
+			textooculto.style.display = 'none';
                     ocultarButton.style.display = 'inline-block';
                 } else {
                     caja.style.display = 'none';
                     mostrarButton.style.display = 'inline-block';
+			textooculto.style.display = 'inline-block';
                     ocultarButton.style.display = 'none';
                 }
             });
