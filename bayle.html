@@ -46,28 +46,7 @@ text-align: center;
             display: none;
         }
     </style>
-
-    <!-- JavaScript -->
-    <script>
-        function toggleCajas() {
-            var profesores = document.querySelectorAll('.caja.oculto');
-            var mostrarButton = document.getElementById('mostrar-button');
-            var ocultarButton = document.getElementById('ocultar-button');
-
-            caja.forEach(function(caja) {
-                if (caja.style.display === 'none' || caja.style.display === '') {
-                    caja.style.display = 'block';
-                    mostrarButton.style.display = 'none';
-                    ocultarButton.style.display = 'inline-block';
-                } else {
-                    caja.style.display = 'none';
-                    mostrarButton.style.display = 'inline-block';
-                    ocultarButton.style.display = 'none';
-                }
-            });
-        }
-    </script>
-
+	
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51" onclick="PlayAudio()">
@@ -343,6 +322,26 @@ document.getElementById("audio1").play();
 }
 </script>
 
+	        <!-- JavaScript -->
+    <script>
+        function toggleCajas() {
+            var caja = document.querySelectorAll('.caja.oculto');
+            var mostrarButton = document.getElementById('mostrar-button');
+            var ocultarButton = document.getElementById('ocultar-button');
+
+            caja.forEach(function(caja) {
+                if (caja.style.display === 'none' || caja.style.display === '') {
+                    caja.style.display = 'block';
+                    mostrarButton.style.display = 'none';
+                    ocultarButton.style.display = 'inline-block';
+                } else {
+                    caja.style.display = 'none';
+                    mostrarButton.style.display = 'inline-block';
+                    ocultarButton.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 
