@@ -135,22 +135,23 @@ text-align: center;
                     <div class="text-center">
                         <img class="img-fluid mb-4" src="img/cancion.gif" alt="">
 			    <div id="sugerircancion0" class="section-title position-relative text-center" style="visibility:visible;">
-                <section id="seccion">
+                <main id="seccion1">
 			<h1 class="font-secondary display-4">Deseas sugerir alguna canción?</h1>
 <i class="far fa-heart text-dark"></i>
-		</section>
-				    <br><br><br>
+							    <br><br><br>
 <button id ="botoncancion" class="btn btn-primary font-weight-bold py-3 px-5" type="submit" onsubmit="SugeCancion()" onclick="SugeCancion()" >SUGERIR CANCIÓN</button>
+
+		</main>
 </div>
                             <div>
-				    <section id="seccion" hidden>
+				    <main id="seccion2" hidden>
 		<form onsubmit="emailSend(); reset(); return false;">
 			<input type="text" id="name" placeholder="name" name="name" required>
 			<input type="text" id="phone" placeholder="phone" name="phone" required>
 			<input type="email" id="email" placeholder="email" name="email" required>
 			<button type="submit" class="btn">submit</button>
 		</form>
-				    </section>
+				    </main>
                             </div>
                     </div>
                 </div>
