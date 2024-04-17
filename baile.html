@@ -40,6 +40,13 @@ text-align: center;
 }
 </style>
 
+		<!-- CSS -->
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+	
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51" onclick="PlayAudio()">
@@ -135,7 +142,12 @@ text-align: center;
                 <div class="col-lg-8">
                     <div class="text-center">
                         <img class="img-fluid mb-4" src="img/cancion.gif" alt="">
-                            <div>
+			    <div>
+			<h6 id="textooculto" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">¿Quieres sugerir alguna canción?</h6>  
+					</div>
+				    <br>
+<button id ="mostrar-button" class="btn btn-primary font-weight-bold py-3 px-5" onclick="toggleCajas()" >Si, quiero!!!</button>
+                            <div class="caja oculto">
 				    <!-- form.123formbuilder.com script begins here -->
 					<script type="text/javascript" defer src="https://form.123formbuilder.com/embed/3647525.js" data-role="form" data-default-width="800px" data-custom-vars="hasEmbedFormStyle=1&hasTransparentBg=1"></script>
 				    <!-- form.123formbuilder.com script ends here -->
@@ -294,6 +306,29 @@ document.getElementById("audio1").play();
 }
 </script>
 
+	    	    	        <!-- JavaScript -->
+    <script>
+        function toggleCajas() {
+            var caja = document.querySelectorAll('.caja.oculto');
+            var mostrarButton = document.getElementById('mostrar-button');
+            var ocultarButton = document.getElementById('ocultar-button');
+		var textooculto = document.getElementById('textooculto');
+
+            caja.forEach(function(caja) {
+                if (caja.style.display === 'none' || caja.style.display === '') {
+                    caja.style.display = 'block';
+                    mostrarButton.style.display = 'none';
+			textooculto.style.display = 'none';
+                    ocultarButton.style.display = 'inline-block';
+                } else {
+                    caja.style.display = 'none';
+                    mostrarButton.style.display = 'inline-block';
+			textooculto.style.display = 'inline-block';
+                    ocultarButton.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 
