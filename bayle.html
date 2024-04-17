@@ -40,6 +40,34 @@ text-align: center;
 }
 </style>
 
+	    <!-- CSS -->
+    <style>
+        .ocultocharly {
+            display: none;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleCajas() {
+            var profesores = document.querySelectorAll('.caja.ocultocharly');
+            var mostrarButton = document.getElementById('mostrar-button');
+            var ocultarButton = document.getElementById('ocultar-button');
+
+            caja.forEach(function(caja) {
+                if (caja.style.display === 'none' || caja.style.display === '') {
+                    caja.style.display = 'block';
+                    mostrarButton.style.display = 'none';
+                    ocultarButton.style.display = 'inline-block';
+                } else {
+                    caja.style.display = 'none';
+                    mostrarButton.style.display = 'inline-block';
+                    ocultarButton.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51" onclick="PlayAudio()">
@@ -142,6 +170,10 @@ text-align: center;
 <button id ="botoncancion" class="btn btn-primary font-weight-bold py-3 px-5" onclick="SugeCancion()" >SUGERIR CANCIÓN</button>
 
 		</main>
+</div>
+			    <div>
+    <button id="mostrar-button" onclick="toggleCajas()">Ver Todo</button>
+    <button id="ocultar-button" onclick="toggleCajas()" style="display: none;">Ocultar</button>
 </div>
                             <div>
 				    <main id="seccion2" hidden>
